@@ -45,4 +45,24 @@ class Pessoa {
 }
 
 var xandy: Pessoa = Pessoa(nome: "Alexandre Brigolin", peso: 80, altura: 1.82)
+var mari: Pessoa = Pessoa(nome: "Mariana Lima", peso: 60, altura: 1.70)
+
 print(xandy.nome)
+print(mari.nome)
+
+//reference type -> uma das principais característica de uma classe
+// a partir da linha 55 estmamos dizendo que temos uma unica referencia!
+xandy = mari
+
+print(xandy.nome)
+print(mari.nome)
+
+xandy.nome = "Alex"
+
+print(xandy.nome)
+print(mari.nome)
+
+mari.nome = "Vera"
+
+print(xandy.nome)
+print(mari.nome)
