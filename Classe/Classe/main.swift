@@ -28,3 +28,21 @@ class Automovel {
 
 //instanciado a classe, toda vez que instacio uma classe quer dizer que estou dando via a esse objeto!
 var meuCarro: Automovel = Automovel()
+
+//criando classe de maneira dinamica, atravez de construtores
+
+class Pessoa {
+    
+    var nome: String
+    var peso: Double
+    var altura: Double
+    
+    init(nome: String, peso: Double, altura: Double) {
+        self.nome = nome
+        self.peso = peso
+        self.altura = altura
+    }
+}
+
+var xandy: Pessoa = Pessoa(nome: "Alexandre Brigolin", peso: 80, altura: 1.82)
+print(xandy.nome)
