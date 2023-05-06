@@ -15,20 +15,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.text = ""
         configObserver()    }
     
     func configObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(updateIphone), name: Notification.Name("Iphone"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateMacBook), name: Notification.Name("Iphone"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateMacBook), name: Notification.Name("MacBook"), object: nil)
     }
     
     @objc func updateIphone() {
         print(#function)
+        logoImageView.image = UIImage(named: "iphone")
+        titleLabel.text = "Iphone 14 pro"
+        titleLabel.textColor = .black
+        view.backgroundColor = .cyan
     }
     
     @objc func updateMacBook() {
         print(#function)
-        
+        logoImageView.image = UIImage(named: "macbook")
+        titleLabel.text = "Mac Book pro"
+        titleLabel.textColor = .black
+        view.backgroundColor = .red
     }
     
     @IBAction func tappedChooseButton(_ sender: UIButton) {
