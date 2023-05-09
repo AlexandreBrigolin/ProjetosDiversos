@@ -15,13 +15,20 @@ class SelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configLayout()
+    }
+    
+    public func configLayout() {
+        iphoneButton.clipsToBounds = true
+        iphoneButton.layer.cornerRadius = 8
+        macBookButton.clipsToBounds = true
+        macBookButton.layer.cornerRadius = 8
     }
     
     @IBAction func tappedIphoneButton(_ sender: UIButton) {
         NotificationCenter.default.post(name: Notification.Name("Iphone"), object: UIColor.red)
         dismiss(animated: true)
+        configLayout()
     }
     
     @IBAction func tappedMacBookButton(_ sender: UIButton) {

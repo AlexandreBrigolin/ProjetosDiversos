@@ -16,16 +16,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = ""
+        chooseButton.layer.cornerRadius = 8
         configObserver()    }
     
     func configObserver() {
-        NotificationCenter.default.addObserver(self, selector: #selector(updateIphone), name: Notification.Name("Iphone"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateMacBook), name: Notification.Name("MacBook"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateIphone), name: .iphone, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateMacBook), name: .macbook, object: nil)
     }
     
     @objc func updateIphone() {
         print(#function)
         logoImageView.image = UIImage(named: "iphone")
+        logoImageView.clipsToBounds = true
+        logoImageView.layer.cornerRadius = 20
         titleLabel.text = "Iphone 14 pro"
         titleLabel.textColor = .black
         view.backgroundColor = .cyan

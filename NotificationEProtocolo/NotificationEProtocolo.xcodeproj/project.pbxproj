@@ -18,6 +18,7 @@
 		3FC42F4B2A047493000F49B4 /* NotificationEProtocoloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC42F4A2A047493000F49B4 /* NotificationEProtocoloUITestsLaunchTests.swift */; };
 		3FC42F592A047806000F49B4 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC42F582A047806000F49B4 /* SelectionViewController.swift */; };
 		3FC42F5B2A047A5A000F49B4 /* SelectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC42F5A2A047A5A000F49B4 /* SelectionViewController.storyboard */; };
+		3FC42F5E2A09A2EA000F49B4 /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC42F5D2A09A2EA000F49B4 /* NotificationCenterExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3FC42F4A2A047493000F49B4 /* NotificationEProtocoloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationEProtocoloUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3FC42F582A047806000F49B4 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		3FC42F5A2A047A5A000F49B4 /* SelectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectionViewController.storyboard; sourceTree = "<group>"; };
+		3FC42F5D2A09A2EA000F49B4 /* NotificationCenterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,10 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				3FC42F572A0477E5000F49B4 /* SelectionViewController */,
-				3FC42F272A047491000F49B4 /* AppDelegate.swift */,
-				3FC42F292A047491000F49B4 /* SceneDelegate.swift */,
 				3FC42F2B2A047491000F49B4 /* ViewController.swift */,
 				3FC42F2D2A047491000F49B4 /* Main.storyboard */,
+				3FC42F272A047491000F49B4 /* AppDelegate.swift */,
+				3FC42F292A047491000F49B4 /* SceneDelegate.swift */,
 				3FC42F302A047493000F49B4 /* Assets.xcassets */,
 				3FC42F322A047493000F49B4 /* LaunchScreen.storyboard */,
 				3FC42F352A047493000F49B4 /* Info.plist */,
@@ -135,10 +137,19 @@
 		3FC42F572A0477E5000F49B4 /* SelectionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3FC42F5C2A09A2B3000F49B4 /* Extension */,
 				3FC42F582A047806000F49B4 /* SelectionViewController.swift */,
 				3FC42F5A2A047A5A000F49B4 /* SelectionViewController.storyboard */,
 			);
 			path = SelectionViewController;
+			sourceTree = "<group>";
+		};
+		3FC42F5C2A09A2B3000F49B4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3FC42F5D2A09A2EA000F49B4 /* NotificationCenterExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC42F5E2A09A2EA000F49B4 /* NotificationCenterExtension.swift in Sources */,
 				3FC42F2C2A047491000F49B4 /* ViewController.swift in Sources */,
 				3FC42F592A047806000F49B4 /* SelectionViewController.swift in Sources */,
 				3FC42F282A047491000F49B4 /* AppDelegate.swift in Sources */,
