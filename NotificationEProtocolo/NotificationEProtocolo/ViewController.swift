@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         logoImageView.image = UIImage(named: "iphone")
         logoImageView.clipsToBounds = true
         logoImageView.layer.cornerRadius = 20
-        titleLabel.text = "Iphone 14 pro"
+        titleLabel.text = "Iphone 14 pro Max"
         titleLabel.textColor = .black
         view.backgroundColor = .cyan
     }
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     @objc func updateMacBook() {
         print(#function)
         logoImageView.image = UIImage(named: "macbook")
-        titleLabel.text = "Mac Book pro"
+        titleLabel.text = "Mac Book pro M1"
         titleLabel.textColor = .black
         view.backgroundColor = .red
     }
