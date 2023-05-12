@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     private func configTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
     }
     
 }
@@ -39,7 +40,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
+        100
     }
     
     

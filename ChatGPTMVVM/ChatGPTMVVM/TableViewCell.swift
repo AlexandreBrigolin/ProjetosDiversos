@@ -14,8 +14,13 @@ class TableViewCell: UITableViewCell {
     
     static let identifier: String = "TableViewCell"
     
-    public func nib() -> UINib {
+    static func nib() -> UINib {
         return UINib(nibName: TableViewCell.identifier, bundle: nil)
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
     }
     
     public func setupCell(data: Person){
