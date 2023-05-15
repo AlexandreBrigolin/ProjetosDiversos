@@ -26,7 +26,7 @@ class Automovel {
     }
 }
 
-//instanciado a classe, toda vez que instacio uma classe quer dizer que estou dando via a esse objeto!
+//instanciado a classe, toda vez que instacio uma classe quer dizer que estou dando vida a esse objeto!
 var meuCarro: Automovel = Automovel()
 
 //criando classe de maneira dinamica, atravez de construtores
