@@ -26,7 +26,7 @@ class Automovel {
     }
 }
 
-//instanciado a classe, toda vez que instacio uma classe quer dizer que estou dando via a esse objeto!
+//instanciado a classe, toda vez que instacio uma classe quer dizer que estou dando vida a esse objeto!
 var meuCarro: Automovel = Automovel()
 
 //criando classe de maneira dinamica, atravez de construtores
@@ -66,3 +66,18 @@ mari.nome = "Vera"
 
 print(xandy.nome)
 print(mari.nome)
+
+//Concatenação = é quando estamos juntando textos
+
+var frase1: String = "Recebi promoção no trabalho e o meu aumento foi de:"
+var frase2: String = " Reais$"
+var valor: Int = 1500
+
+var fraseCompleta: String = frase1 + String(valor) + frase2
+print(fraseCompleta)
+
+//Interpolação = ele sempre vai converter pra string tudo oque estiver dentro do \().
+
+var fraseCompletaInterpolacao: String = "O valor da minha promoçao foi de: \(valor)"
+print(fraseCompletaInterpolacao
+)
