@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selection View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SelectionViewController" id="Y6W-OH-hqX" customClass="SelectionViewController" customModule="NotificationEProtocolo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opções" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sb-5I-rRK">
+                                <rect key="frame" x="20" y="89" width="353" height="43"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zZz-Tn-pej">
+                                <rect key="frame" x="121.66666666666669" y="241" width="150" height="370"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKh-FY-1XS">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="1HH-vP-qjL"/>
+                                            <constraint firstAttribute="height" constant="180" id="aEp-p0-VBT"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="iphone"/>
+                                        <connections>
+                                            <action selector="tappedIphoneButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EAL-Cd-3vm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUR-4I-Uu2">
+                                        <rect key="frame" x="0.0" y="190" width="150" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="SEX-k0-07X"/>
+                                            <constraint firstAttribute="width" constant="150" id="ViJ-cp-XbL"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="macbook"/>
+                                        <connections>
+                                            <action selector="tappedMacBookButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5qP-8G-6wF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Sb-5I-rRK" secondAttribute="trailing" constant="20" id="9q2-y8-gLb"/>
+                            <constraint firstItem="zZz-Tn-pej" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Dmw-tp-oJu"/>
+                            <constraint firstItem="5Sb-5I-rRK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="RdP-QD-H0c"/>
+                            <constraint firstItem="5Sb-5I-rRK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="aZ6-tD-37N"/>
+                            <constraint firstItem="zZz-Tn-pej" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jVg-o4-NEq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iphoneButton" destination="mKh-FY-1XS" id="B1t-Eg-jMW"/>
+                        <outlet property="macBookButton" destination="QUR-4I-Uu2" id="nri-Bt-Xwb"/>
+                        <outlet property="titleLabel" destination="5Sb-5I-rRK" id="IgB-24-rzg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iphone" width="522" height="641"/>
+        <image name="macbook" width="1984" height="1118"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
