@@ -11,7 +11,7 @@
         <!--Item 2-->
         <scene sceneID="Qbu-Io-m7i">
             <objects>
-                <viewController id="Vch-3g-VVd" sceneMemberID="viewController">
+                <viewController id="Vch-3g-VVd" customClass="Tela02ViewController" customModule="TabBarSimples" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xdA-bM-sdk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
         <!--Item 1-->
         <scene sceneID="Kis-LF-DX0">
             <objects>
-                <viewController id="kK1-AM-Ppi" sceneMemberID="viewController">
+                <viewController id="kK1-AM-Ppi" customClass="Tela01ViewController" customModule="TabBarSimples" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ovz-sZ-ixu">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
         <!--Item-->
         <scene sceneID="51m-aZ-jON">
             <objects>
-                <viewController id="45K-cN-KqT" sceneMemberID="viewController">
+                <viewController id="45K-cN-KqT" customClass="Tela03ViewController" customModule="TabBarSimples" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UDj-mt-EAO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
