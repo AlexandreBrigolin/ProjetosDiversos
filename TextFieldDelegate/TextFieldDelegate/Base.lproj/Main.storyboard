@@ -24,16 +24,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PER-K5-enR">
+                                <rect key="frame" x="20" y="139" width="353" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="llb-Zh-bZg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
+                            <constraint firstItem="PER-K5-enR" firstAttribute="top" secondItem="M2w-tK-cyk" secondAttribute="bottom" constant="20" id="7Ry-zh-Vea"/>
+                            <constraint firstItem="PER-K5-enR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AM7-RZ-E6D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M2w-tK-cyk" secondAttribute="trailing" constant="20" id="RTK-5J-ARI"/>
                             <constraint firstItem="M2w-tK-cyk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cjd-26-3ab"/>
                             <constraint firstItem="M2w-tK-cyk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lzF-yT-EBx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PER-K5-enR" secondAttribute="trailing" constant="20" id="qJT-b8-Qf1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="PER-K5-enR" id="8Bp-L6-ecC"/>
                         <outlet property="nameTextField" destination="M2w-tK-cyk" id="Jjv-Mv-4nn"/>
                     </connections>
                 </viewController>
