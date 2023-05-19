@@ -30,13 +30,13 @@ extension ViewController: UITextFieldDelegate {
         print(#function)
 //        textField.layer.borderColor = UIColor.blue.cgColor
 //        textField.layer.borderWidth = 1
-        if textField == nameTextField {
-            nameTextField.layer.borderColor = UIColor.orange.cgColor
-            nameTextField.layer.borderWidth = 1
-        } else {
-            emailTextField.layer.borderColor = UIColor.yellow.cgColor
-            emailTextField.layer.borderWidth = 1
-        }
+//        if textField == nameTextField {
+//            nameTextField.layer.borderColor = UIColor.orange.cgColor
+//            nameTextField.layer.borderWidth = 1
+//        } else {
+//            emailTextField.layer.borderColor = UIColor.yellow.cgColor
+//            emailTextField.layer.borderWidth = 1
+//        }
     }
    
 //    quando o botão abaixa/some da tela
@@ -56,7 +56,7 @@ extension ViewController: UITextFieldDelegate {
 //        }else {
 //            view.backgroundColor = .red
 //        }
-        textField.layer.borderWidth = 0
+//        textField.layer.borderWidth = 0
        
         
     }
