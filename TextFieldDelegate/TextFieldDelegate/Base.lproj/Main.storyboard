@@ -32,21 +32,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjf-Va-pNS">
+                                <rect key="frame" x="30" y="219" width="333" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yqy-tW-ncW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tappedRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gCH-An-nLJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
+                            <constraint firstItem="Tjf-Va-pNS" firstAttribute="top" secondItem="PER-K5-enR" secondAttribute="bottom" constant="40" id="795-2E-z33"/>
                             <constraint firstItem="PER-K5-enR" firstAttribute="top" secondItem="M2w-tK-cyk" secondAttribute="bottom" constant="20" id="7Ry-zh-Vea"/>
                             <constraint firstItem="PER-K5-enR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AM7-RZ-E6D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M2w-tK-cyk" secondAttribute="trailing" constant="20" id="RTK-5J-ARI"/>
+                            <constraint firstItem="Tjf-Va-pNS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Zta-2c-hLk"/>
                             <constraint firstItem="M2w-tK-cyk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cjd-26-3ab"/>
                             <constraint firstItem="M2w-tK-cyk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lzF-yT-EBx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tjf-Va-pNS" secondAttribute="trailing" constant="30" id="p2g-xd-Pws"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PER-K5-enR" secondAttribute="trailing" constant="20" id="qJT-b8-Qf1"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="PER-K5-enR" id="8Bp-L6-ecC"/>
                         <outlet property="nameTextField" destination="M2w-tK-cyk" id="Jjv-Mv-4nn"/>
+                        <outlet property="registerButton" destination="Tjf-Va-pNS" id="VNd-wW-32O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
