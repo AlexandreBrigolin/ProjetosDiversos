@@ -15,7 +15,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Tela02", sender: nil)
+//ir pra proxima tela atravaes da main
+//        performSegue(withIdentifier: "Tela02", sender: nil)
+        
+        let vc: Tela02ViewController? = UIStoryboard(name: "Tela02ViewController", bundle: nil).instantiateViewController(withIdentifier: "Tela02ViewController") as? Tela02ViewController
+        present(vc ?? UIViewController(), animated: true)
     }
     
     

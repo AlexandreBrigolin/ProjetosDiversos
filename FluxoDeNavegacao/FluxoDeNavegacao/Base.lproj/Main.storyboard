@@ -32,35 +32,13 @@
                             <constraint firstItem="ykM-2l-RGH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fq2-05-TKA"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="6Ct-BC-CuH" kind="show" identifier="Tela02" id="sM9-Lk-f9u"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5" y="8"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="4cR-0T-dRj">
-            <objects>
-                <viewController id="6Ct-BC-CuH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xGj-oq-P1p">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="YrF-S7-Xx6"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1YW-Qu-Xan"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Lz-CZ-ySh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="801" y="8"/>
-        </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
