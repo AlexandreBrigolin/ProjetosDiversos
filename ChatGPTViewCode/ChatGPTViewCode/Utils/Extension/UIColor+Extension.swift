@@ -10,4 +10,6 @@ import UIKit
 
 extension UIColor {
     
+    static let backGraund = UIColor(red: 27/255, green: 20/255, blue: 40/255, alpha: 1.0)
+    
 }

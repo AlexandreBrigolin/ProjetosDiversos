@@ -20,14 +20,14 @@ class HomeScreen: UIView {
     lazy var contentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .green
+        view.backgroundColor = .backGraund
         return view
     }()
     
     lazy var subContentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .yellow
+        view.backgroundColor = .white
         view.clipsToBounds = true
         view.layer.cornerRadius = 8
         return view
@@ -47,8 +47,14 @@ class HomeScreen: UIView {
         buttom.translatesAutoresizingMaskIntoConstraints = false
         buttom.clipsToBounds = true
         buttom.layer.cornerRadius = 8
+        buttom.setImage(UIImage(named: "enviar"), for: .normal)
+        buttom.addTarget(self, action: #selector(tappedSendButton), for: .touchUpInside)
         return buttom
     }()
+    
+    @objc func tappedSendButton() {
+        print(#function)
+    }
 
     
     override init(frame: CGRect) {
@@ -67,6 +73,7 @@ class HomeScreen: UIView {
         addSubview(contentView)
         contentView.addSubview(subContentView)
         subContentView.addSubview(messageTextField)
+        subContentView.addSubview(sendButtom)
     }
     
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource){
@@ -84,21 +91,22 @@ class HomeScreen: UIView {
             contentView.bottomAnchor.constraint(equalTo: keyboardLayoutGuide.topAnchor),
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 50),
+            contentView.heightAnchor.constraint(equalToConstant: 80),
             
             subContentView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             subContentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             subContentView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            subContentView.heightAnchor.constraint(equalToConstant: 30),
+            subContentView.heightAnchor.constraint(equalToConstant: 50),
             
             messageTextField.centerYAnchor.constraint(equalTo: subContentView.centerYAnchor),
-            messageTextField.trailingAnchor.constraint(equalTo: subContentView.trailingAnchor, constant: -10),
+            messageTextField.trailingAnchor.constraint(equalTo: sendButtom.leadingAnchor, constant: -5),
             messageTextField.leadingAnchor.constraint(equalTo: subContentView.leadingAnchor, constant: 10),
-            messageTextField.heightAnchor.constraint(equalToConstant: 30),
+            messageTextField.heightAnchor.constraint(equalToConstant: 40),
             
             sendButtom.heightAnchor.constraint(equalToConstant: 40),
             sendButtom.widthAnchor.constraint(equalToConstant: 40),
             sendButtom.centerYAnchor.constraint(equalTo: subContentView.centerYAnchor, constant: -10),
+            sendButtom.trailingAnchor.constraint(equalTo: subContentView.trailingAnchor, constant: -5)
             
         ])
     }
