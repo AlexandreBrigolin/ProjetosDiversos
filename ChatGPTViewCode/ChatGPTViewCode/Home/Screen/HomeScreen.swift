@@ -13,7 +13,7 @@ class HomeScreen: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .backGraund
         return tableView
     }()
     
@@ -59,7 +59,7 @@ class HomeScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .blue
+        backgroundColor = .backGraund
         addElements()
         configConstraints()
     }

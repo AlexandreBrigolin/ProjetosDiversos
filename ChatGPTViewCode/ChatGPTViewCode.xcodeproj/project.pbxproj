@@ -15,6 +15,7 @@
 		3FC4315E2A201992000F49B4 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4315D2A201991000F49B4 /* HomeScreen.swift */; };
 		3FC431622A203CE1000F49B4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC431612A203CE1000F49B4 /* UIColor+Extension.swift */; };
 		3FC431642A212374000F49B4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC431632A212374000F49B4 /* UIViewController+Extension.swift */; };
+		3FC4317A2A26B171000F49B4 /* OutgoingTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC431792A26B171000F49B4 /* OutgoingTextTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3FC4315D2A201991000F49B4 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		3FC431612A203CE1000F49B4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3FC431632A212374000F49B4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		3FC431792A26B171000F49B4 /* OutgoingTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		3FC4315B2A201950000F49B4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3FC431782A26B140000F49B4 /* Cell */,
 				3FC4315C2A20195D000F49B4 /* Screen */,
 				3FC4314B2A2016ED000F49B4 /* HomeViewController.swift */,
 			);
@@ -103,6 +106,14 @@
 				3FC431632A212374000F49B4 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3FC431782A26B140000F49B4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3FC431792A26B171000F49B4 /* OutgoingTextTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			files = (
 				3FC431642A212374000F49B4 /* UIViewController+Extension.swift in Sources */,
 				3FC4315E2A201992000F49B4 /* HomeScreen.swift in Sources */,
+				3FC4317A2A26B171000F49B4 /* OutgoingTextTableViewCell.swift in Sources */,
 				3FC4314C2A2016ED000F49B4 /* HomeViewController.swift in Sources */,
 				3FC431482A2016ED000F49B4 /* AppDelegate.swift in Sources */,
 				3FC4314A2A2016ED000F49B4 /* SceneDelegate.swift in Sources */,
