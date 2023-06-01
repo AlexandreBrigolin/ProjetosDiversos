@@ -7,13 +7,21 @@
 
 import UIKit
 
+protocol HomeScreenProtocol: AnyObject {
+    func sendMessage(text: String)
+}
+
 class HomeScreen: UIView {
+    
+    weak var delegate: HomeScreenProtocol?
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = .none
         tableView.backgroundColor = .backGraund
+        tableView.register(OutgoingTextTableViewCell.self, forCellReuseIdentifier: OutgoingTextTableViewCell.identifier)
+        tableView.register(IncomingTextMessageTableViewCell.self, forCellReuseIdentifier: IncomingTextMessageTableViewCell.identifier)
         return tableView
     }()
     
@@ -39,6 +47,7 @@ class HomeScreen: UIView {
         textField.placeholder = "Digite aqui"
         textField.autocorrectionType = .no
         textField.borderStyle = .none
+        textField.delegate = self
         return textField
     }()
     
@@ -47,6 +56,7 @@ class HomeScreen: UIView {
         buttom.translatesAutoresizingMaskIntoConstraints = false
         buttom.clipsToBounds = true
         buttom.layer.cornerRadius = 8
+        buttom.isEnabled = false
         buttom.setImage(UIImage(named: "enviar"), for: .normal)
         buttom.addTarget(self, action: #selector(tappedSendButton), for: .touchUpInside)
         return buttom
@@ -54,8 +64,11 @@ class HomeScreen: UIView {
     
     @objc func tappedSendButton() {
         print(#function)
+        delegate?.sendMessage(text: messageTextField.text ?? "")
+        messageTextField.text = ""
+        sendButtom.isEnabled = false
     }
-
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -110,6 +123,17 @@ class HomeScreen: UIView {
             
         ])
     }
-    
-  }
+}
 
+extension HomeScreen: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text as NSString? else { return false }
+        let updateText = text.replacingCharacters(in: range, with: string)
+        if updateText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            sendButtom.isEnabled = false
+        }else {
+            sendButtom.isEnabled = true
+        }
+        return true
+    }
+}

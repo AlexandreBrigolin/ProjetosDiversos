@@ -10,17 +10,22 @@ import UIKit
 class HomeViewController: UIViewController {
 
     var screen: HomeScreen?
+    var viewModel: HomeViewModel = HomeViewModel()
     
     override func loadView() {
         screen = HomeScreen()
         view = screen
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        addLogoNavigationBarItem(image: UIImage(named: "BF_Logo") ?? UIImage())
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        screen?.delegate = self
         self.screen?.configTableViewProtocols(delegate: self, dataSource: self)
     }
-
 
 }
 
@@ -28,14 +33,31 @@ extension HomeViewController: UITableViewDelegate {  }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.numberOfRowsInSection
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: OutgoingTextTableViewCell.identifier, for: indexPath) as? OutgoingTextTableViewCell
-        
-        return cell ?? UITableViewCell()
+        let model = viewModel.loadCurrentMessage(indexPath: indexPath)
+        switch model.typeMessage {
+        case .user:
+            let cell = tableView.dequeueReusableCell(withIdentifier: OutgoingTextTableViewCell.identifier, for: indexPath) as? OutgoingTextTableViewCell
+            cell?.setupCell(message: model.message)
+            return cell ?? UITableViewCell()
+        case .chatGPT:
+            let cell = tableView.dequeueReusableCell(withIdentifier: IncomingTextMessageTableViewCell.identifier, for: indexPath) as? IncomingTextMessageTableViewCell
+            cell?.setupCell(message: model.message)
+            return cell ?? UITableViewCell()
+        }
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return viewModel.heightForRowAt(indexPath: indexPath)
+    }
+}
+
+extension HomeViewController: HomeScreenProtocol {
+    func sendMessage(text: String) {
+        viewModel.addMessage(message: text)
+        screen?.tableView.reloadData()
+    }
 }
