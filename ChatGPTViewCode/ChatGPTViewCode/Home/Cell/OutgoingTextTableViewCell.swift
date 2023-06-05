@@ -14,11 +14,10 @@ class OutgoingTextTableViewCell: UITableViewCell {
     lazy var messageView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .yellow
         view.clipsToBounds = true
         view.layer.cornerRadius = 22
         view.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner, .layerMaxXMinYCorner]
-        view.backgroundColor = .red
+        view.backgroundColor = .black
         return view
     }()
     

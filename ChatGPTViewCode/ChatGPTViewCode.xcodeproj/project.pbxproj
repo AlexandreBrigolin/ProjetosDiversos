@@ -51,6 +51,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FBF328C2A2DF49200E24CB9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		3FC4313B2A2016ED000F49B4 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +77,7 @@
 		3FC431462A2016ED000F49B4 /* ChatGPTViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				3FBF328C2A2DF49200E24CB9 /* Service */,
 				3FC431802A292B35000F49B4 /* Model */,
 				3FC4315F2A203CAB000F49B4 /* Utils */,
 				3FC4315B2A201950000F49B4 /* Home */,

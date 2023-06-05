@@ -16,7 +16,7 @@ class IncomingTextMessageTableViewCell: UITableViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 22
         view.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMinYCorner , .layerMaxXMinYCorner]
-        view.backgroundColor = .yellow
+        view.backgroundColor = .lightText
         return view
     }()
     
