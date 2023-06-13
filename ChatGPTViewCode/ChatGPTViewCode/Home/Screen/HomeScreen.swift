@@ -22,6 +22,7 @@ class HomeScreen: UIView {
         tableView.backgroundColor = .backGraund
         tableView.register(OutgoingTextTableViewCell.self, forCellReuseIdentifier: OutgoingTextTableViewCell.identifier)
         tableView.register(IncomingTextMessageTableViewCell.self, forCellReuseIdentifier: IncomingTextMessageTableViewCell.identifier)
+        tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
         return tableView
     }()
     
@@ -63,7 +64,6 @@ class HomeScreen: UIView {
     }()
     
     @objc func tappedSendButton() {
-        print(#function)
         delegate?.sendMessage(text: messageTextField.text ?? "")
         messageTextField.text = ""
         sendButtom.isEnabled = false
@@ -120,7 +120,6 @@ class HomeScreen: UIView {
             sendButtom.widthAnchor.constraint(equalToConstant: 40),
             sendButtom.centerYAnchor.constraint(equalTo: subContentView.centerYAnchor, constant: -10),
             sendButtom.trailingAnchor.constraint(equalTo: subContentView.trailingAnchor, constant: -5)
-            
         ])
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3FBF328E2A2DF93300E24CB9 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF328D2A2DF93300E24CB9 /* HomeService.swift */; };
+		3FBF32912A37511100E24CB9 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3FBF32902A37511100E24CB9 /* OpenAISwift */; };
 		3FC431482A2016ED000F49B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC431472A2016ED000F49B4 /* AppDelegate.swift */; };
 		3FC4314A2A2016ED000F49B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC431492A2016ED000F49B4 /* SceneDelegate.swift */; };
 		3FC4314C2A2016ED000F49B4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4314B2A2016ED000F49B4 /* HomeViewController.swift */; };
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FBF32912A37511100E24CB9 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +173,9 @@
 			dependencies = (
 			);
 			name = ChatGPTViewCode;
+			packageProductDependencies = (
+				3FBF32902A37511100E24CB9 /* OpenAISwift */,
+			);
 			productName = ChatGPTViewCode;
 			productReference = 3FC431442A2016ED000F49B4 /* ChatGPTViewCode.app */;
 			productType = "com.apple.product-type.application";
@@ -199,6 +204,9 @@
 				Base,
 			);
 			mainGroup = 3FC4313B2A2016ED000F49B4;
+			packageReferences = (
+				3FBF328F2A37511100E24CB9 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 3FC431452A2016ED000F49B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -444,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FBF328F2A37511100E24CB9 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FBF32902A37511100E24CB9 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FBF328F2A37511100E24CB9 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3FC4313C2A2016ED000F49B4 /* Project object */;
 }
