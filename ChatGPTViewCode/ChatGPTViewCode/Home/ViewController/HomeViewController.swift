@@ -19,6 +19,13 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         addLogoNavigationBarItem(image: UIImage(named: "BF_Logo") ?? UIImage())
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gearshape.fill"), style: .done, target: self, action: #selector(confgTapped))
+        navigationItem.rightBarButtonItem?.tintColor = .white
+    }
+    
+    @objc func confgTapped(){
+        let vc: SettingsViewController = SettingsViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewDidLoad() {
