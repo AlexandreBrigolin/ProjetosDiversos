@@ -28,7 +28,7 @@ class SettingsViewModel {
     
     
     public func feathPerson() {
-        service.getPersonFromJson { result in
+        service.getPersonAlamofire { result in
             switch result {
             case .success(let success):
                 self.person = success

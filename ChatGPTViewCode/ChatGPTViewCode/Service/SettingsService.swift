@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import Alamofire
 
 enum ErrorProfile: Swift.Error {
     case fileNotFound(name: String)
     case fileDecodingFailed(name: String, Swift.Error)
     case errorURLRequest(Swift.Error)
+    case errorRequest(AFError)
     case errorUrl(urlString: String)
     case errorDetail(detail: String)
 }
@@ -45,6 +47,18 @@ class SettingsService {
         }.resume()
     }
     
+    func getPersonAlamofire(completion: @escaping (Result<Person, ErrorProfile>) -> Void) {
+        AF.request(urlString, method: .get).validate(statusCode: 200...299).responseDecodable(of: Person.self) { response in
+            debugPrint(response)
+            switch response.result {
+            case .success(let success):
+                completion(.success(success))
+            case .failure(let error):
+                completion(.failure(ErrorProfile.errorRequest(error)))
+            }
+        }
+    }
+    
     func getPersonFromJson(completion: (Result<Person, ErrorProfile>) -> Void) {
         if let url = Bundle.main.url(forResource: "person", withExtension: "json") {
             do {
@@ -58,8 +72,4 @@ class SettingsService {
             }
         }
     }
-    
-    
-    
-    
 }
