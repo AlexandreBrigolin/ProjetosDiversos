@@ -19,11 +19,25 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.delegate = self
+        viewModel.feathPerson()
     
     }
     
 
  
 
+}
+
+extension SettingsViewController: SettingsViewModelProtocol {
+    func success() {
+        self.screen?.nameLabel.text = viewModel.getName
+        self.screen?.ageLabel.text = viewModel.getAge
+    }
+    
+    func error(error: ErrorProfile) {
+        print(error)
+    }
+    
+    
 }
