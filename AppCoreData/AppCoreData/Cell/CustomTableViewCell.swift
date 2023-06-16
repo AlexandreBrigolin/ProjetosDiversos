@@ -12,10 +12,10 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     
-    static let identifier: String = "CustomTableViewCell"
-    
-    public func nib() -> UINib {
-        return UINib(nibName: CustomTableViewCell.identifier, bundle: nil)
+    static let identifier: String = String(describing: CustomTableViewCell.self)
+
+    static func nib() -> UINib {
+        return UINib(nibName: identifier, bundle: nil)
     }
     
     override func awakeFromNib() {
@@ -23,7 +23,9 @@ class CustomTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    
+    public func setupCell() {
+        
+    }
     
     
 }
