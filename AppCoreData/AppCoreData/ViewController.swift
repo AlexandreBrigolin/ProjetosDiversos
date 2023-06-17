@@ -16,12 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     
     
-    var viewModel: ViewModel = ViewModel()
+    var vm: ViewModel = ViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
-
     }
     
     private func configTableView() {
@@ -40,16 +39,17 @@ class ViewController: UIViewController {
     
 }
 
-extension UIViewController: UITableViewDataSource, UITableViewDelegate {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return vm.numberOfRowsInSection
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomTableViewCell.identifier, for: indexPath) as? CustomTableViewCell
+        cell?.setupCell(data: vm.getPerson(indexPath: indexPath))
        
-        return UITableViewCell()
+        return cell ?? UITableViewCell()
         
     }
     
