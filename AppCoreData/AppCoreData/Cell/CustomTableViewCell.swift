@@ -23,8 +23,9 @@ class CustomTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    public func setupCell() {
-        
+    public func setupCell(data: Person){
+        nameLabel.text = data.name
+        ageLabel.text = String(data.age)
     }
     
     

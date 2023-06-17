@@ -16,6 +16,7 @@
 		3FBF33062A3BDEBB00E24CB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBF33042A3BDEBB00E24CB9 /* LaunchScreen.storyboard */; };
 		3FBF33102A3BE1D400E24CB9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF330E2A3BE1D400E24CB9 /* CustomTableViewCell.swift */; };
 		3FBF33112A3BE1D400E24CB9 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FBF330F2A3BE1D400E24CB9 /* CustomTableViewCell.xib */; };
+		3FBF33142A3CF66000E24CB9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF33132A3CF66000E24CB9 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3FBF33072A3BDEBB00E24CB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FBF330E2A3BE1D400E24CB9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		3FBF330F2A3BE1D400E24CB9 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		3FBF33132A3CF66000E24CB9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		3FBF32F52A3BDEB900E24CB9 /* AppCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3FBF33122A3CF42700E24CB9 /* ViewModel */,
 				3FBF330D2A3BE1A900E24CB9 /* Cell */,
 				3FBF32F62A3BDEB900E24CB9 /* AppDelegate.swift */,
 				3FBF32F82A3BDEB900E24CB9 /* SceneDelegate.swift */,
@@ -82,6 +85,14 @@
 				3FBF330F2A3BE1D400E24CB9 /* CustomTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3FBF33122A3CF42700E24CB9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3FBF33132A3CF66000E24CB9 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 				3FBF33102A3BE1D400E24CB9 /* CustomTableViewCell.swift in Sources */,
 				3FBF32FB2A3BDEB900E24CB9 /* ViewController.swift in Sources */,
 				3FBF32F72A3BDEB900E24CB9 /* AppDelegate.swift in Sources */,
+				3FBF33142A3CF66000E24CB9 /* ViewModel.swift in Sources */,
 				3FBF32F92A3BDEB900E24CB9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
